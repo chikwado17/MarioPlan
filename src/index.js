@@ -8,9 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 ReactDOM.render(
 <BrowserRouter>
     <App />
-</BrowserRouter>,rootEl);
-
-
+</BrowserRouter>,rootEl)
 if(module.hot) {
     module.hot.accept('./App', () => {
         const NextApp = require('./App').default
