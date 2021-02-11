@@ -1,4 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createProject } from '../../redux/auth/project/actions/projectAction';
+
+
+const mapDispatchToProps = {
+    createProject
+}
+
+
 
 class CreateProject extends Component {
     state = {
@@ -9,14 +18,14 @@ class CreateProject extends Component {
     handleInputChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
-        })
+        });
     };
 
 
     handleFormSubmit = (e) => {
         e.preventDefault();
 
-        console.log(this.state);
+        this.props.createProject(this.state);
     }
 
 
@@ -42,4 +51,4 @@ class CreateProject extends Component {
     }
 }
 
-export default CreateProject;
+export default connect(null,mapDispatchToProps)(CreateProject);
