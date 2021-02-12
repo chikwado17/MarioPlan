@@ -12,10 +12,8 @@ var firebaseConfig = {
     appId: "1:465378622517:web:77893466335d41341a457c",
     measurementId: "G-CX7G200HF9"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.firestore().settings({
-      timestampsInSnapshots: true
-  });
 
+  firebase.initializeApp(firebaseConfig);
+  firebase.firestore();
+  
   export default firebase;

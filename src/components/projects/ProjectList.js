@@ -1,10 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux'; 
 import ProjectSummary from './ProjectSummary';
 
-const mapStateToProps = (state) => ({
-    projects: state.project.projects
-})
 
 const ProjectList = ({projects}) => {
     return ( 
@@ -16,4 +12,4 @@ const ProjectList = ({projects}) => {
      );
 }
  
-export default connect(mapStateToProps)(ProjectList);
+export default ProjectList;

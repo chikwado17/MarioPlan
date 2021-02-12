@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createProject } from '../../redux/auth/project/actions/projectAction';
+import { createProject } from '../../redux/project/actions/projectAction';
 
 
 const mapDispatchToProps = {
     createProject
 }
-
-
 
 class CreateProject extends Component {
     state = {
